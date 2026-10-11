@@ -1,0 +1,1 @@
+A small project for visualizing data transmitted from an Arduino microcontroller.
