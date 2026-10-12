@@ -4,7 +4,7 @@ import time
 
 # Port parameters
 PORT = '/dev/ttyACM0'
-SCOPE = 9600
+SPEED = 9600
 
 # Folder parameters
 PATH = 'data/'
@@ -14,7 +14,7 @@ folder = open(f"{PATH}{FILE_NAME}.csv", 'w', newline='')
 sensor_writer = csv.writer(folder)
 
 try:
-    with serial.Serial(PORT, SCOPE, timeout=1) as ser:
+    with serial.Serial(PORT, SPEED, timeout=1) as ser:
         print(f"Connecting to the port {PORT}")
         time.sleep(2)
         while True:
